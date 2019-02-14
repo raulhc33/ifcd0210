@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sistema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///E:/E2/XML/Esquema.xsd">
+	<estrela id="Sol" massa="150MS" nome="Sol" tamanho="grande" temperatura="5000K"/>
+	<orbita diametro="200">
+		<planeta id="planeta1" nome="Mercúrio" superficie="red" tamanho="pequeno"/>
+	</orbita>
+	<orbita diametro="300">
+		<planeta id="planeta2" nome="Venus" superficie="purple" tamanho="medio"/>
+	</orbita>
+	<orbita diametro="400">
+		<planeta id="planeta3" nome="Terra" superficie="blue" tamanho="medio"/>
+	</orbita>
+	<orbita diametro="500">
+		<planeta id="planeta4" nome="Marte" superficie="orange" tamanho="grande"/>
+	</orbita>
+	<orbita diametro="600">
+		<planeta id="planeta5" nome="Júpiter" superficie="blon" tamanho="grande"/>
+	</orbita>
+	<orbita diametro="700">
+		<planeta id="planeta6" nome="Saturno" superficie="pink" tamanho="grande"/>
+	</orbita>
+	<orbita diametro="800">
+		<planeta id="planeta7" nome="Urano" superficie="green" tamanho="grande">
+			<lua id="lua1" formato="esferico" tamanho="medio"/>
+		</planeta>
+	</orbita>
+	<orbita diametro="900">
+		<planeta id="planeta8" nome="Netuno" superficie="orange" tamanho="pequeno"/>
+	</orbita>
+</sistema>

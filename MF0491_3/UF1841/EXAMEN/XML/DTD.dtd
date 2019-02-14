@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- DTD generado con XMLSpy v2019 sp1 (http://www.altova.com) -->
+<!ELEMENT lua EMPTY>
+<!ATTLIST lua
+	id CDATA #FIXED "lua1"
+	formato CDATA #FIXED "esferico"
+	tamanho CDATA #FIXED "medio"
+>
+<!ELEMENT orbita (planeta)>
+<!ATTLIST orbita
+	diametro (200 | 300 | 400 | 500 | 600 | 700 | 800 | 900) #REQUIRED
+>
+<!ELEMENT estrela EMPTY>
+<!ATTLIST estrela
+	id CDATA #FIXED "Sol"
+	massa CDATA #FIXED "150MS"
+	nome CDATA #FIXED "Sol"
+	tamanho CDATA #FIXED "grande"
+	temperatura CDATA #FIXED "5000K"
+>
+<!ELEMENT planeta (lua?)>
+<!ATTLIST planeta
+	id (planeta1 | planeta2 | planeta3 | planeta4 | planeta5 | planeta6 | planeta7 | planeta8) #REQUIRED
+	nome (Júpiter | Marte | Mercúrio | Netuno | Saturno | Terra | Urano | Venus) #REQUIRED
+	superficie (blon | blue | green | orange | pink | purple | red) #REQUIRED
+	tamanho (grande | medio | pequeno) #REQUIRED
+>
+<!ELEMENT sistema (estrela, orbita+)>

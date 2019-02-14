@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- W3C Schema generado con XMLSpy v2019 sp1 (http://www.altova.com) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="estrela">
+		<xs:complexType>
+			<xs:attribute name="id" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Sol"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="massa" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="150MS"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="nome" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Sol"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="tamanho" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="grande"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="temperatura" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="5000K"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="lua">
+		<xs:complexType>
+			<xs:attribute name="id" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="lua1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="formato" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="esferico"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="tamanho" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="medio"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="orbita">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="planeta"/>
+			</xs:sequence>
+			<xs:attribute name="diametro" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:short">
+						<xs:enumeration value="200"/>
+						<xs:enumeration value="300"/>
+						<xs:enumeration value="400"/>
+						<xs:enumeration value="500"/>
+						<xs:enumeration value="600"/>
+						<xs:enumeration value="700"/>
+						<xs:enumeration value="800"/>
+						<xs:enumeration value="900"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="planeta">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="lua" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="id" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="planeta1"/>
+						<xs:enumeration value="planeta2"/>
+						<xs:enumeration value="planeta3"/>
+						<xs:enumeration value="planeta4"/>
+						<xs:enumeration value="planeta5"/>
+						<xs:enumeration value="planeta6"/>
+						<xs:enumeration value="planeta7"/>
+						<xs:enumeration value="planeta8"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="nome" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Júpiter"/>
+						<xs:enumeration value="Marte"/>
+						<xs:enumeration value="Mercúrio"/>
+						<xs:enumeration value="Netuno"/>
+						<xs:enumeration value="Saturno"/>
+						<xs:enumeration value="Terra"/>
+						<xs:enumeration value="Urano"/>
+						<xs:enumeration value="Venus"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="superficie" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="blon"/>
+						<xs:enumeration value="blue"/>
+						<xs:enumeration value="green"/>
+						<xs:enumeration value="orange"/>
+						<xs:enumeration value="pink"/>
+						<xs:enumeration value="purple"/>
+						<xs:enumeration value="red"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="tamanho" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="grande"/>
+						<xs:enumeration value="medio"/>
+						<xs:enumeration value="pequeno"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="sistema">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="estrela"/>
+				<xs:element ref="orbita" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
